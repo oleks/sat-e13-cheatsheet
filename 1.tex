@@ -10,10 +10,10 @@ $$
 }
 $$
 
-\textbf{Introduction:} symbol appears among the premises, on the right-hand
-side of the turnstile.
+\textbf{Introduction:} symbol appears in the conclusion, on the right-hand side
+of the turnstile.
 
-\textbf{Elimination:} symbol appears in the conclusion, on the right-hand side
+\textbf{Elimination:} symbol appears among the premises, on the right-hand side
 of the turnstile.
 
 $$
@@ -104,7 +104,48 @@ $$
 \sequent{
   \Gamma, P \vdash Q
 }{
-  \Gamma \vdash P \implies Q
+  \Gamma \vdash P \Rightarrow Q
+}
+\quad
+\Rightarrow E:
+\sequent{
+  \Gamma \vdash P \Rightarrow Q
+  \quad
+  \Gamma \vdash P
+}{
+  \Gamma \vdash Q
+}
+$$
+
+$$
+\top I:
+\sequent{
+  %
+}{
+  \Gamma \vdash \top
+}
+\quad
+\bot E:
+\sequent{
+  \Gamma \vdash \bot
+}{
+  \Gamma \vdash Q
+}
+$$
+
+$$
+\neg I:
+\sequent{
+  \Gamma, P \vdash \bot
+}{
+  \Gamma \neg P
+}
+\quad
+\neg E:
+\sequent{
+  \Gamma \vdash \neg P \quad \Gamma \vdash P
+}{
+  \Gamma \vdash \bot
 }
 $$
 
