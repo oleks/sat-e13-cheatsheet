@@ -1,0 +1,110 @@
+\newcommand{\sequent}[2]{{\displaystyle #1\over\displaystyle #2}}
+
+$$\text{Antecedent(s)} \vdash \text{consequent}$$
+
+$$
+\sequent{
+  \text{Premise(s)}
+}{
+  \text{Conclusion}
+}
+$$
+
+\textbf{Introduction:} symbol appears among the premises, on the right-hand
+side of the turnstile.
+
+\textbf{Elimination:} symbol appears in the conclusion, on the right-hand side
+of the turnstile.
+
+$$
+Ass_i:
+\sequent{
+  %
+}{
+  P_1,\ldots,P_n \vdash P_i
+}
+\p{i\in\set{1,\ldots,n}}
+$$
+
+$$
+Axiom_P:
+\sequent{
+  %
+}{
+  \Gamma \vdash P
+}
+\p{P\ \text{is an axiom}}
+$$
+
+$$
+Lemma:
+\sequent{
+  \Gamma \vdash P \quad \Gamma, P \vdash Q
+}{
+  \Gamma \vdash Q
+}
+$$
+
+$$
+\wedge I:
+\sequent{
+  \Gamma \vdash P_1 \quad \Gamma \vdash P_2
+}{
+  \Gamma \vdash P_1 \wedge P_2
+}
+$$
+
+$$
+\wedge E_1:
+\sequent{
+  \Gamma \vdash P_1 \wedge P_2
+}{
+  \Gamma \vdash P_1
+}
+\quad
+\wedge E_2:
+\sequent{
+  \Gamma \vdash P_1 \wedge P_2
+}{
+  \Gamma \vdash P_2
+}
+$$
+
+$$
+\vee I_1:
+\sequent{
+  \Gamma \vdash P_1
+}{
+  \Gamma \vdash P_1 \vee P_2
+}
+\quad
+\vee I_2:
+\sequent{
+  \Gamma \vdash P_2
+}{
+  \Gamma \vdash P_1 \vee P_2
+}
+$$
+
+$$
+\vee E:
+\sequent{
+  \Gamma \vdash P_1 \vee P_2
+  \quad
+  \Gamma, P_1 \vdash Q
+  \quad
+  \Gamma, P_2 \vdash Q
+}{
+  \Gamma \vdash Q
+}
+$$
+
+$$
+\Rightarrow I:
+\sequent{
+  \Gamma, P \vdash Q
+}{
+  \Gamma \vdash P \implies Q
+}
+$$
+
